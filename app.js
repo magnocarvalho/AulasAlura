@@ -18,9 +18,7 @@
 
 var app = require('./config/express')();
 var rotasProdutos = require('./app/routes/produtos')(app);
-app.get('/produtos', function(request, response) {
-    response.render('produtos/lista');
-});
+
 app.listen(3000, function(){
     console.log("Servidor rodando");
 });
